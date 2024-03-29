@@ -1,0 +1,46 @@
+#spring.application.name=myApp
+
+
+# Tomcat Server Port
+server:
+  port: 8081
+  
+# Logger
+logging.level:
+  web: DEBUG
+  '[com.bptn.feedapp]': DEBUG
+  
+  # Active Profile
+spring:
+  profiles:
+    active: default
+    
+# Banner Text
+  banner:
+    charset: UTF-8
+    location: classpath:/banner/academy.txt
+   
+   
+   # Jackson Settings
+  jackson:
+    time-zone: America/Toronto
+    date-format: "yyyy-MM-dd HH:mm:ss" 
+    
+---
+
+# Default Profile
+spring:
+  config:
+    activate:
+      on-profile: default 
+       
+# Database Settings
+  datasource:
+    url: jdbc:postgresql://localhost:5432/feedApp
+    username: postgres
+    password: ahmed4839
+    hikari:
+      maximum-pool-size: 2
+  jpa:
+    hibernate:
+      ddl-auto: validate
