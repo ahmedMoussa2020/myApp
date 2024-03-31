@@ -3,7 +3,7 @@
 
 # Tomcat Server Port
 server:
-  port: 8081
+  port: 8080
   
 # Logger
 logging.level:
