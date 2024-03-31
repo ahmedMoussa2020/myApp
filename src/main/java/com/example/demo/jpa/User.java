@@ -21,7 +21,7 @@ import jakarta.persistence.Table;
 // implements Serializable is a marker interface in Java that tells the compiler that the class is serializable.
 //  This serialization process converts an object into a stream of bytes, which can then be saved to a file, sent over a network, or stored in a database.
 public class User implements Serializable {
-	
+
 //  This is a unique identifier for the class version used in the serialization and deserialization processes.
 	private static final long serialVersionUID = 1L;
 
@@ -32,10 +32,10 @@ public class User implements Serializable {
 // @Column: This annotation specifies the mapping of the annotated field to a column in the database table. Here, the column name is userId.
 @Column(name = "\"userId\"")
 	private Integer userId;
-	
+
 	@Column(name="\"firstName\"")
 	private String firstName;
-		
+
 	@Column(name="\"lastName\"")
 	private String lastName;
 
@@ -43,18 +43,18 @@ public class User implements Serializable {
 
 	@JsonProperty(access = Access.WRITE_ONLY)
 	private String password;
-		
+
 	private String phone;
 
 	@Column(name="\"emailId\"")
 	private String emailId;
-		
+
 	@Column(name="\"emailVerified\"")
 	private Boolean emailVerified;
-		
+
 	@Column(name="\"createdOn\"")
 	private Timestamp createdOn;
-	
+
 	public User() {
 	}
 
@@ -136,6 +136,6 @@ public class User implements Serializable {
 				+ username + ", password=" + password + ", phone=" + phone + ", emailId=" + emailId + ", emailVerified="
 				+ emailVerified + ", createdOn=" + createdOn + "]";
 	}
-	
-	
+
+
 }
