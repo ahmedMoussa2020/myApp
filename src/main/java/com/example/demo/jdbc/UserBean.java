@@ -2,6 +2,8 @@ package com.example.demo.jdbc;
 
 import java.sql.Timestamp;
 
+
+// The user UserBean holds the User's information
 public class UserBean {
 	
 	private Integer userId;
