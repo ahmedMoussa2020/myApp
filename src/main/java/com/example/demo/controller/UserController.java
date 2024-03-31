@@ -53,7 +53,7 @@ public class UserController {
 
 	@GetMapping("/{username}")
 // method to get an existing User from the database: 
-	public UserBean findByUsername(@PathVariable String username) {
+	public UserBean findByUsername(@PathVariable String username) { //@PathVariable in annotation indicates that the value of the {userId} variable from the URL will be mapped to the userId method parameter.
 
 		logger.debug("The findByUsername() method was invoked!, username={}", username);
 		return this.userService.findByUsername(username);
